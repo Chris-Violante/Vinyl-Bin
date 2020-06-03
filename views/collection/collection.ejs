@@ -19,7 +19,7 @@
               <td><img src="<%= a.coverArt %>" height="75px" width="75px"></td>
               <td><%= a.releaseYear %></td>
               <td><%= a.catalogNumber %></td>
-              <td><a href="/albums/<%= a._id %>">DETAILS</a></td>
+              <td><a href="/albums/<%= a._id %>" type="button" class="btn btn-sm btn-outline-secondary">Details</a><a href="<%= collection._id %>/<%= a._id %>" type="button" class="btn btn-sm btn-outline-secondary">Remove</a></td>
             </tr>
             <% }); %>
           </tbody>

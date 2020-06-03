@@ -5,7 +5,12 @@ const Album = require('../models/album');
 module.exports = {
    userCollection,
     isLoggedIn,
-    newAlbum
+    newAlbum,
+    removeAlbum
+};
+
+function removeAlbum(req, res) {
+    
 };
 
 function newAlbum(req, res) {
