@@ -14,7 +14,7 @@ The Record Bin is a place to manage, expand, research, create and, inventory you
 - MongoDB
 - EJS
 - Google Oauth2
-- 
+
 
 
 ## getting started

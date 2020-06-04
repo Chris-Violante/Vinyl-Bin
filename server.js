@@ -47,7 +47,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/collection', collectionRouter);
-app.use('/:id', albumRouter)
+app.use('/albums', albumRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
