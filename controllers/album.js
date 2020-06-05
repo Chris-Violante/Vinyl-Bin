@@ -5,12 +5,19 @@ const Album = require('../models/album');
 module.exports = {
     detail, 
     removeAlbum,
-    editAlbum
+    getEditPage,
+    makeEdit
 };
 
-function editAlbum(req, res) {
+function makeEdit(req, res) {
+    Album.findByIdAndUpdate(req.params.albumId, req.body, {new: true}, function(err, album) {
+        console.log(album, 'hit the make edit controller')
+        res.redirect(`/albums/${album._id}`);
+    });
+};
+
+function getEditPage(req, res) {
     Album.findById(req.params.albumId, function(err, album){
-        console.log(album, 'hit the edit controller function');
         res.render('album/edit', {album : album});
     });
 };
@@ -26,7 +33,7 @@ function detail(req, res) {
             collection.records.remove(req.params.albumId);
             collection.save(function(err) {
                 res.redirect('/collection')
-            })
+            });
         }
     )};
 

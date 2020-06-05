@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
 
 <div class="card-body">
-    <form id="new-form" action="/albums/<%= album._id %>" method="POST">
+    <form id="edit-form" action="/albums/<%= album._id %>?_method=PUT" method="POST">
         <label>Artist:</label>
-        <input type="text" name="artist" placeholder="<%= album.artist %>"><br>
+        <input type="text" name="artist" value="<%= album.artist %>"><br>
         <label>Title:</label>
-        <input type="text" name="title" placeholder="<%= album.title %>" ><br>
+        <input type="text" name="title" value="<%= album.title %>" ><br>
         <label>Release Year:</label>
-        <input type="number" name="releaseYear" placeholder="<%= album.releaseYear %>"><br>
+        <input type="number" name="releaseYear" value="<%= album.releaseYear %>"><br>
         <label>Catalog Number:</label>
-        <input type="text" name="catalogNumber" placeholder="<%= album.catalogNumber %>"><br>
+        <input type="text" name="catalogNumber" value="<%= album.catalogNumber %>"><br>
         <label>Cover Art:</label>
-        <input type="text" name="coverArt" placeholder="<%= album.coverArt %>"><br>
+        <input type="text" name="coverArt" value="<%= album.coverArt %>"><br>
         <input type="submit" value="Edit Album">
     </form>
 </div>
