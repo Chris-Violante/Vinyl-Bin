@@ -6,7 +6,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="425" src="<%= album.coverArt %>" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= album.artist %>: <%= album.title %></text></img>
+            <img class="bd-placeholder-img card-img-top" width="500" height="500" src="<%= album.coverArt %>" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= album.artist %>: <%= album.title %></text>
+          </img>
             <div class="card-body">
               <p class="card-text"><%= album.artist %>: <%= album.title %> was released in <%= album.releaseYear %>.  This version in your collection has catalog number <%= album.catalogNumber %>.</p>
               <div class="d-flex justify-content-between align-items-center">
